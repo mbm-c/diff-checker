@@ -9,6 +9,7 @@ A simple and intuitive diff checker application built with Python and Streamlit.
 - 🎨 Side-by-side HTML diff visualization with color coding
 - 📈 Diff statistics (line counts, difference count)
 - 💻 Clean and modern UI
+- 🔒 **Privacy-first**: No logging, no data collection, completely secure
 
 ## Installation
 
@@ -39,6 +40,20 @@ The application provides two diff visualization options:
 
 1. **Unified Diff**: Standard unified diff format showing additions and deletions
 2. **Side-by-Side HTML Diff**: Visual HTML diff with color-coded changes (green for additions, red for deletions)
+
+## Privacy & Security
+
+**Your data is completely private and secure:**
+
+- ✅ **No logging**: The application does not log, store, or track any content you enter
+- ✅ **No data collection**: Your inputs are processed in memory only and never stored
+- ✅ **No external requests**: Your data is never sent to third-party services
+- ✅ **No persistence**: Your data is never saved to files or databases
+- ✅ **In-memory processing**: All diff calculations happen in server memory and are discarded after processing
+
+This application processes your text in memory on the server. Your data is only kept temporarily during 
+the comparison and is immediately discarded. We have no way to see, access, or store your content 
+after the session ends.
 
 ## Requirements
 

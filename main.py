@@ -90,6 +90,22 @@ def main():
     st.title("🔍 Diff Checker")
     st.markdown("Compare two texts and see the differences between them.")
     
+    # Privacy notice
+    with st.expander("🔒 Privacy & Security", expanded=False):
+        st.markdown("""
+        **Your data is completely private and secure:**
+        
+        - ✅ **No logging**: We do not log, store, or track any content you enter
+        - ✅ **No data collection**: Your inputs are processed in memory only and never stored
+        - ✅ **No external requests**: Your data is never sent to third-party services
+        - ✅ **No persistence**: Your data is never saved to files or databases
+        - ✅ **In-memory processing**: All diff calculations happen in server memory and are discarded after processing
+        
+        This application processes your text in memory on the server. Your data is only kept temporarily 
+        during the comparison and is immediately discarded. We have no way to see, access, or store 
+        your content after the session ends.
+        """)
+    
     # Create two columns for side-by-side input
     col1, col2 = st.columns(2)
     
