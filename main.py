@@ -161,6 +161,12 @@ def main():
         font-size: 14px;
         line-height: 1.6;
     }
+    .stTextArea > div > div > button {
+        display: none !important;
+    }
+    .stTextArea label {
+        display: none !important;
+    }
     .stButton > button {
         width: 100%;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -192,17 +198,6 @@ def main():
         border-radius: 10px;
         background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
         border-left: 5px solid #f59e0b;
-    }
-    .input-section {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 2px solid #e9ecef;
-        margin-bottom: 1rem;
-    }
-    .input-section:hover {
-        border-color: #667eea;
-        transition: all 0.3s ease;
     }
     h3 {
         color: #667eea;
@@ -238,28 +233,24 @@ def main():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown('<div class="input-section">', unsafe_allow_html=True)
         st.markdown("### 📝 Text 1")
         text1 = st.text_area(
-            "Enter first text:",
+            label="Text 1 input field",
             height=350,
             key="text1",
             placeholder="Enter your first text here...\n\nExample:\ndef hello():\n    print('Hello, World!')",
-            label_visibility="collapsed"
+            label_visibility="hidden"
         )
-        st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
-        st.markdown('<div class="input-section">', unsafe_allow_html=True)
         st.markdown("### 📝 Text 2")
         text2 = st.text_area(
-            "Enter second text:",
+            label="Text 2 input field",
             height=350,
             key="text2",
             placeholder="Enter your second text here...\n\nExample:\ndef hello():\n    print('Hello, World!')",
-            label_visibility="collapsed"
+            label_visibility="hidden"
         )
-        st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
     
